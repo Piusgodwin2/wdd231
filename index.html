@@ -26,6 +26,18 @@
     </nav>
   </header>
 
+  <section class="hero">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('images/hero.jpg');"></div>
+    <div class="slide" style="background-image: url('images/business-executives-participating-business-meeting.jpg');"></div>
+    <div class="slide" style="background-image: url('images/middle-african-descent-woman-speaking-into-microphone.jpg');"></div>
+  </div>
+  <!--<div class="hero-text">
+    <h1>We Support Small Businesses</h1>
+  </div>-->
+</section>
+
+
   <main>
     <h1>Home</h1>
 
@@ -55,11 +67,11 @@
     </figure>
     <figure>
       <img src="images/authentic-small-youthful-marketing-agency.jpg" alt="Local Business Fair"/>
-      <figcaption>Business Fair</figcaption>
+      <figcaption>Group Discussions</figcaption>
     </figure>
     <figure>
       <img src="images/middle-african-descent-woman-speaking-into-microphone.jpg" alt="Community Outreach" />
-      <figcaption>Community Outreach</figcaption>
+      <figcaption>Business Talks</figcaption>
     </figure>
     <figure>
       <img src="images/group-business-women-participating-panel-discussion.jpg" alt="Entrepreneur Workshop" />
@@ -111,6 +123,19 @@
   toggleBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
+
+  // HERO SLIDESHOW SCRIPT
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function changeSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  // Change slide every 5 seconds
+  setInterval(changeSlide, 5000);
   </script>
 </body>
 </html>
