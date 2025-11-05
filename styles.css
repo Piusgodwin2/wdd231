@@ -22,12 +22,21 @@ img {
   display: block;
 }
 
-/* ===== LAYOUT CONTAINERS ===== */
-header, main, footer {
+/* Header and footer now full-width */
+header, footer {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Keep only main content centered */
+main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
+
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
@@ -141,7 +150,7 @@ footer {
 .events {
   grid-column: 1 / -1;
   text-align: center;
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
