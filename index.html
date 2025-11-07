@@ -7,6 +7,7 @@
   <meta name="author" content="Your Name" />
   <title>Chamber of Commerce | Home</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="index.js" defer></script>
   <!-- Font Awesome CDN -->
 <link
   rel="stylesheet"
@@ -87,6 +88,22 @@
   </div>
 </section>
 
+<<section id="certificate">
+      <h2>Certificate: Web and Computer Programming</h2>
+
+      <div class="filter-buttons">
+        <button id="allBtn" class="filter-btn active">All Courses</button>
+        <button id="wddBtn" class="filter-btn">WDD Courses</button>
+        <button id="cseBtn" class="filter-btn">CSE Courses</button>
+      </div>
+
+      <div id="coursesContainer" class="courses-list"></div>
+
+      <div class="credits">
+        <h3>Total Credits: <span id="totalCredits">0</span></h3>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -114,35 +131,5 @@
       <p id="lastModified"></p>
     </div>
   </footer>
-
-  <script>
-    // Dynamically display the current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Display the last modified date of the document
-    document.getElementById('lastModified').textContent =
-      "Last Modified: " + document.lastModified;
-
-      // ** Hamburger Menu Toggle **
-  const toggleBtn = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-
-  // HERO SLIDESHOW SCRIPT
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
-
-  function changeSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }
-
-  // Change slide every 5 seconds
-  setInterval(changeSlide, 5000);
-  </script>
 </body>
 </html>
