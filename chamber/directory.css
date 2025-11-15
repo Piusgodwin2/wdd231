@@ -271,6 +271,36 @@ footer a img:hover {
     height: 120px;
   }
 
+  /* ================================
+   LIST VIEW — TEXT ONLY, NO IMAGE
+   ================================ */
+
+.list-view .members-card {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 15px 20px;
+}
+
+.list-view .members-card img {
+  display: none; /* Hide image */
+}
+
+.list-view .details {
+  text-align: left;
+}
+
+.list-view .details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.list-view .details p {
+  font-size: 0.9rem;
+  margin: 3px 0;
+}
+
+
   /* --- GRID & LIST TOGGLE BUTTONS --- */
   .togglebtn {
     flex-direction: row;
