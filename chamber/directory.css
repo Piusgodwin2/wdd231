@@ -143,77 +143,83 @@ h1 {
   display: grid;
 }
 
-
-/* ===============================
-   MEMBER CARDS (DEFAULT = GRID)
-================================= 
-.members-card {
-  background: #fff;
-  max-width: 500px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;   /* grid default
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+/* MEMBERS CONTAINER */
+#MembersContainer {
+display: grid;
+gap: 1.5rem;
+padding: 1rem;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
+
+
+/* MEMBER CARD */
+.members-card {
+background: #fff;
+padding: 15px;
+border-radius: 10px;
+border: 1px solid #ddd;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+text-align: center;
+transition: all 0.3s ease;
+}
+
 
 .members-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+width: 150px;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 10px;
 }
 
-.members-card .details h3 {
-  color: #004469;
-  margin-bottom: 8px;
-  font-size: 18px;
+
+.members-card h2 {
+font-size: 1.2rem;
+color: #004469;
+margin-bottom: 8px;
 }
 
-.members-card .details p {
-  font-size: 14px;
-  margin: 4px 0;
-}*/
+
+.members-card p {
+margin: 4px 0;
+font-size: 0.95rem;
+}
 
 
-/* ===============================
-   GRID VIEW (visible images)
-================================= */
+/* GRID VIEW */
 .members-card.grid-view img {
-  display: block;
+display: block;
 }
 
 
-/* ===============================
-   LIST VIEW (text only)
-================================= */
+/* LIST VIEW */
 .members-card.list-view {
-  display: block;
-  width: 100%;
-  padding: 18px 20px;
+display: block;
+width: 100%;
+text-align: left;
 }
+
 
 .members-card.list-view img {
-  display: none !important;
+display: none !important;
 }
 
-.members-card.list-view .details {
-  text-align: left;
+
+.members-card.list-view h2 {
+font-size: 1.3rem;
 }
 
-.members-card.list-view .details h3 {
-  font-size: 1.2rem;
+
+.members-card.list-view p {
+font-size: 1rem;
 }
 
-.members-card.list-view .details p {
-  font-size: 0.95rem;
-}
 
+/* HOVER EFFECT */
+.members-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
 /* ===============================
    HOVER EFFECT

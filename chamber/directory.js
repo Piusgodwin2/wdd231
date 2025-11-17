@@ -13,34 +13,10 @@ toggleBtn.addEventListener('click', () => {
 });
 
 
-// Grid and list view toggle
-const members = document.getElementsById('MembersContainer');
+const MembersContainer = document.getElementsById('MembersContainer');
 const gridBtn = document.getElementById('gridbtn');
 const listBtn = document.getElementById('listbtn');
 
-/* GRID VIEW
-gridBtn.addEventListener('click', () => {
-    for (let card of members) { // members is like an array,You must loop through it:
-        card.classList.remove('list-view');
-        card.classList.add('grid-view');
-    }
-
-    gridBtn.classList.add('active');
-    listBtn.classList.remove('active');
-});
-
-// LIST VIEW
-listBtn.addEventListener('click', () => {
-    for (let card of members) {
-        card.classList.remove('grid-view');
-        card.classList.add('list-view');
-    }
-
-    listBtn.classList.add('active');
-    gridBtn.classList.remove('active');
-});
-
-//*/
 
 const fetchmembers = async () => {
     try {
@@ -59,7 +35,7 @@ displayMembers = (members) => {
     members.forEach(
         member => {
             const card = document.createElement('div');
-            card.classList.add('members-card');
+            card.classList.add('members-card, grid-view'); // default to grid view
             card.innerHTML = `
             <img src="images/${member.image}" alt="${member.name}">
             <h2>${member.name}</h2>
@@ -73,3 +49,39 @@ displayMembers = (members) => {
         }
     )
 }
+
+// Function to display membership label
+function membershipLabel(level) {
+  switch(level) {
+    case 1: return 'Member';
+    case 2: return 'Silver';
+    case 3: return 'Gold';
+    default: return 'Member';
+  }
+}
+
+// Toggle functions
+const getCards = () => document.querySelectorAll('.members-card');
+
+// GRID VIEW
+gridBtn.addEventListener('click', () => {
+    getCards().forEach(card => {
+        card.classList.remove('list-view');
+        card.classList.add('grid-view');
+    });
+
+    gridBtn.classList.add('active');
+    listBtn.classList.remove('active');
+});
+
+listBtn.addEventListener('click', () => {
+    getCards().forEach(card => {
+        card.classList.remove('grid-view');
+        card.classList.add('list-view');
+    });
+
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
+});
+
+fetchmembers(); // fetches the JSON data using async/await.

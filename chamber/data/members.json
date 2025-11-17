@@ -4,7 +4,7 @@
     "address": "123 Innovation Lane, Lagos, Nigeria",
     "phone": "+234 800 123 4567",
     "website": "https://firstbnk.com",
-    "image": "images/member1.jpg",
+    "image": "member1.jpg",
     "membership": 3,
     "description": "Leading finacial institition."
   },
@@ -13,7 +13,7 @@
     "address": "45 Farm Road, Abuja, Nigeria",
     "phone": "+234 900 987 6543",
     "website": "https://greenleaffarms.ng",
-    "image": "images/member2.jpg",
+    "image": "member2.jpg",
     "membership": 2,
     "description": "Organic produce and farming solutions."
   },
@@ -22,7 +22,7 @@
     "address": "89 Media Ave, Lagos, Nigeria",
     "phone": "+234 801 222 3344",
     "website": "https://gee2tee.com",
-    "image": "images/member3.jpg",
+    "image": "member3.jpg",
     "membership": 1,
     "description": "Creative media and advertising agency."
   },
@@ -31,7 +31,7 @@
     "address": "21 River Street, Port Harcourt, Nigeria",
     "phone": "+234 802 556 7788",
     "website": "https://aquapure.ng",
-    "image": "images/member-backup.jpg",
+    "image": "member-backup.jpg",
     "membership": 3,
     "description": "Premium bottled water manufacturer."
   },
@@ -40,7 +40,7 @@
     "address": "77 Cargo Lane, Lagos, Nigeria",
     "phone": "+234 803 998 1122",
     "website": "https://skyline-logistics.ng",
-    "image": "images/member2.jpg",
+    "image": "member2.jpg",
     "membership": 2,
     "description": "Reliable logistics and shipping services."
   },
@@ -49,7 +49,7 @@
     "address": "11 Fashion Blvd, Ibadan, Nigeria",
     "phone": "+234 805 333 4455",
     "website": "https://sunshineapparel.ng",
-    "image": "images/member1.jpg",
+    "image": "member1.jpg",
     "membership": 1,
     "description": "Trendy clothing and accessories."
   },
@@ -58,7 +58,7 @@
     "address": "56 Innovation Road, Abuja, Nigeria",
     "phone": "+234 807 667 8899",
     "website": "https://nextgentech.ng",
-    "image": "images/member-backup.jpg",
+    "image": "member-backup.jpg",
     "membership": 3,
     "description": "Cutting-edge IT solutions and services."
   }
