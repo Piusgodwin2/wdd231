@@ -12,7 +12,6 @@ toggleBtn.addEventListener('click', () => {
     navmenu.classList.toggle('open');
 });
 
-// FIXED: Correct method
 const MembersContainer = document.getElementById('MembersContainer');
 const gridBtn = document.getElementById('gridbtn');
 const listBtn = document.getElementById('listbtn');
