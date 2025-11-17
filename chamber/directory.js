@@ -14,11 +14,11 @@ toggleBtn.addEventListener('click', () => {
 
 
 // Grid and list view toggle
-const members = document.getElementsByClassName('members-card');
+const members = document.getElementsById('MembersContainer');
 const gridBtn = document.getElementById('gridbtn');
 const listBtn = document.getElementById('listbtn');
 
-// GRID VIEW
+/* GRID VIEW
 gridBtn.addEventListener('click', () => {
     for (let card of members) { // members is like an array,You must loop through it:
         card.classList.remove('list-view');
@@ -39,3 +39,37 @@ listBtn.addEventListener('click', () => {
     listBtn.classList.add('active');
     gridBtn.classList.remove('active');
 });
+
+//*/
+
+const fetchmembers = async () => {
+    try {
+        const response = await fetch('data/members.json');
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        MembersContainer.innerHTML = '<p>Sorry, we are unable to load members at this time.</p>';
+        console.error(error);
+    }
+}
+
+// Function to display members
+displayMembers = (members) => {
+    MembersContainer.innerHTML = ''; // Clear existing content
+    members.forEach(
+        member => {
+            const card = document.createElement('div');
+            card.classList.add('members-card');
+            card.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name}">
+            <h2>${member.name}</h2>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p><strong>Membership Level:</strong> ${membershipLabel(member.membership)}</p>
+            <p>${member.description}</p>
+            `;
+            MembersContainer.appendChild(card);
+        }
+    )
+}
