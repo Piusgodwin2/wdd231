@@ -9,15 +9,15 @@ const toggleBtn = document.getElementById('menu-toggle');
 const navmenu = document.getElementById('nav-menu');
 
 toggleBtn.addEventListener('click', () => {
-    navmenu.classList.toggle('open'); 
+    navmenu.classList.toggle('open');
 });
 
-
-const MembersContainer = document.getElementsById('MembersContainer');
+// FIXED: Correct method
+const MembersContainer = document.getElementById('MembersContainer');
 const gridBtn = document.getElementById('gridbtn');
 const listBtn = document.getElementById('listbtn');
 
-
+// Fetch members from JSON
 const fetchmembers = async () => {
     try {
         const response = await fetch('data/members.json');
@@ -27,16 +27,19 @@ const fetchmembers = async () => {
         MembersContainer.innerHTML = '<p>Sorry, we are unable to load members at this time.</p>';
         console.error(error);
     }
-}
+};
 
-// Function to display members
-displayMembers = (members) => {
+// Display members
+const displayMembers = (members) => {
     MembersContainer.innerHTML = ''; // Clear existing content
-    members.forEach(
-        member => {
-            const card = document.createElement('div');
-            card.classList.add('members-card, grid-view'); // default to grid view
-            card.innerHTML = `
+
+    members.forEach(member => {
+        const card = document.createElement('div');
+
+        // FIXED: Correct class syntax
+        card.classList.add('members-card', 'grid-view');
+
+        card.innerHTML = `
             <img src="images/${member.image}" alt="${member.name}">
             <h2>${member.name}</h2>
             <p><strong>Address:</strong> ${member.address}</p>
@@ -44,23 +47,23 @@ displayMembers = (members) => {
             <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
             <p><strong>Membership Level:</strong> ${membershipLabel(member.membership)}</p>
             <p>${member.description}</p>
-            `;
-            MembersContainer.appendChild(card);
-        }
-    )
-}
+        `;
 
-// Function to display membership label
+        MembersContainer.appendChild(card);
+    });
+};
+
+// membership label
 function membershipLabel(level) {
-  switch(level) {
-    case 1: return 'Member';
-    case 2: return 'Silver';
-    case 3: return 'Gold';
-    default: return 'Member';
-  }
+    switch(level) {
+        case 1: return 'Member';
+        case 2: return 'Silver';
+        case 3: return 'Gold';
+        default: return 'Member';
+    }
 }
 
-// Toggle functions
+// helper to get all cards
 const getCards = () => document.querySelectorAll('.members-card');
 
 // GRID VIEW
@@ -74,6 +77,7 @@ gridBtn.addEventListener('click', () => {
     listBtn.classList.remove('active');
 });
 
+// LIST VIEW
 listBtn.addEventListener('click', () => {
     getCards().forEach(card => {
         card.classList.remove('grid-view');
@@ -84,4 +88,5 @@ listBtn.addEventListener('click', () => {
     gridBtn.classList.remove('active');
 });
 
-fetchmembers(); // fetches the JSON data using async/await.
+// Load data
+fetchmembers();
