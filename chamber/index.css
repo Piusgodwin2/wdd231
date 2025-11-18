@@ -149,3 +149,31 @@ nav a:hover {
     font-size: 1.8rem;
   }
 }
+
+.COA {
+    text-align: right;   /* Moves the button to the right */
+    padding: 1rem;       /* Adds spacing around the container */
+}
+
+#coa {
+    background-color: #007bff;   /* Blue button */
+    color: #fff;                 /* White text */
+    padding: 0.7rem 1.2rem;      /* Size of the button */
+    border: none;                /* Remove border */
+    border-radius: 6px;          /* Rounded corners */
+    font-size: 1rem;             /* Text size */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: 0.3s ease;       /* Smooth hover effect */
+}
+
+#coa:hover {
+    background-color: #0056b3;   /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #coa {
+        font-size: 0.9rem;       /* Slightly smaller text */
+        padding: 0.7rem 1.1rem;  /* Adjust size for small screens */
+    }
+}
