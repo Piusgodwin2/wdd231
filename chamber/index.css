@@ -185,7 +185,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
- h1 {
+ h1, h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -243,3 +243,183 @@ nav a:hover {
     }
 }
 
+/* Layout container */
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap; /* makes it responsive */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Current Weather Card */
+.current-weather-card {
+    background: #f1f5f9;
+    padding: 1.5rem;
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.current-weather-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#desc {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+#temp {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Weather icon inside card */
+#icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+}
+
+/* Forecast Container */
+#list {
+    background: #ffffff;
+    padding: 1.5rem;
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+#list h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Forecast list styling */
+#Forecast-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Forecast-list li {
+    background: #e3f0ff;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+#Forecast-list li:hover {
+    background: #d3e7ff;
+    cursor: pointer;
+    transform: translateX(4px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .weather-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .current-weather-card,
+    #list {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+/* ===============================
+   RESPONSIVE: MOBILE (≤ 768px)
+================================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #004469;
+    padding: 1rem 0;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  section {
+    display: grid;
+    place-items: center;
+  }
+
+  .members-card {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .members-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+}
+
+
+/* ===============================
+   EXTRA SMALL (≤ 480px)
+================================= */
+@media (max-width: 480px) {
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .site-name {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .members-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .members-card p {
+    font-size: 13px;
+  }
+}
