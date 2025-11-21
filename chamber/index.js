@@ -88,6 +88,78 @@ async function getForecast() {
 apiFetch();
 getForecast();
 
+// == Company sportlight ==
+
+const spotlightcontainer = document.getElementById('spotlight-container');
+
+// Fetch spotlight members from JSON
+const fetchsportlight = async () => {
+  try {
+    const response = await fetch('data/members.json');
+    const spotlight = await response.json();
+
+    // Filter for spotlight members (Gold and Silver)
+    const qualified = spotlight.filter(member => member.membership === 2 || member.membership === 3);
+
+    // Shuffle and select 3 random spotlight members
+    // using the fisher yates shuffle algorithm
+    for (let i = qualified.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [qualified[i], qualified[j]] = [qualified[j], qualified[i]];
+    }
+    // select first 3 members after shuffle
+    const selectedSpotlight = qualified.slice(0, 3);
+
+    displayspotlight(selectedSpotlight);
+
+  } catch (error) {
+    spotlightcontainer.innerHTML = '<p>Sorry, we are unable to load spotlight members at this time.</p>';
+    console.error(error);
+  }
+};
+
+// Display spotlight members
+const displayspotlight = (selectedSpotlight) =>{
+  spotlightcontainer.innerHTML = ''; // Clear existing content
+
+  selectedSpotlight.forEach(member =>{
+    const card = document.createElement('div');
+
+    card.classList.add('spotlight-card');
+
+    // member info
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name}">
+      <h2>${member.name}</h2>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+      <p><strong>Membership Level:</strong> ${membershipLabel(member.membership)}</p>
+      <p>${member.description}</p>
+    `;
+
+    spotlightcontainer.appendChild(card);
+  });
+};
+
+// membership label
+function membershipLabel(level) {
+    switch(level) {
+        case 1: return 'Member';
+        case 2: return 'Silver';
+        case 3: return 'Gold';
+        default: return 'Member';
+    }
+}
+
+// helper to get all cards
+const getCards = () => document.querySelectorAll('.spotlight-card');
+
+
+// Initial fetch of spotlight members
+fetchsportlight();
+
+
 
 
 

@@ -379,16 +379,6 @@ nav a:hover {
     place-items: center;
   }
 
-  .members-card {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .members-card img {
-    width: 120px;
-    height: 120px;
-  }
-
   footer {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
@@ -413,13 +403,81 @@ nav a:hover {
   h1 {
     font-size: 1.5rem;
   }
+}
 
-  .members-card img {
-    width: 100px;
-    height: 100px;
-  }
+/* == SPORTLIGHT SECTION == */
+#spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
-  .members-card p {
-    font-size: 13px;
+/* Each spotlight card */
+.spotlight-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover effect */
+.spotlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Image styling */
+.spotlight-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.spotlight-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
+/* Text */
+.spotlight-card p {
+  font-size: .95rem;
+  margin: .3rem 0;
+  color: #555;
+}
+
+/* Website link */
+.spotlight-card a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.spotlight-card a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+   RESPONSIVENESS
+----------------------------*/
+
+/* Tablets (≥ 600px) - 2 cards */
+@media (min-width: 600px) {
+  #spotlight-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Desktop (≥ 900px) - 3 cards */
+@media (min-width: 900px) {
+  #spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
