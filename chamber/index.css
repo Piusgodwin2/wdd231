@@ -163,33 +163,75 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* CTA container positioned beautifully */
+/* Hero needs positioning context */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* Hero container must be positioned */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* CTA container centered horizontally at bottom */
 .COA {
     position: absolute;
-    bottom: 40px;         /* more breathing space */
-    right: 40px;          /* beautiful offset */
+    bottom: 30px;       /* distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);   /* center horizontally */
     z-index: 20;
 }
 
-/* CTA Button Styling */
+/* CTA styling */
 #coa {
     padding: 14px 32px;
     font-size: 1.1rem;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
     border: none;
-    border-radius: 50px;     /* pill shape looks modern */
+    border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 0.5px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: 0.3s ease-in-out;
 }
 
 #coa:hover {
-    transform: translateY(-3px);      /* smooth float effect */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    background: linear-gradient(135deg, #0056b3, #003f88);
+    transform: translateX(-50%) scale(1.05); /* stays centered when hovering */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .COA {
+        bottom: 20px;        /* slightly closer to bottom */
+    }
+
+    #coa {
+        padding: 12px 26px;
+        font-size: 1rem;
+        border-radius: 40px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .COA {
+        bottom: 15px;        /* more compact spacing */
+    }
+
+    #coa {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        border-radius: 35px;
+        letter-spacing: 0.3px;
+    }
 }
 
 
