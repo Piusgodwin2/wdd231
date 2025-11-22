@@ -207,30 +207,27 @@ nav a:hover {
     transform: translateX(-50%) scale(1.05); /* stays centered when hovering */
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-/* Tablet (max-width: 768px) */
-@media (max-width: 768px) {
-    .COA {
-        bottom: 20px;        /* slightly closer to bottom */
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* Ensure hero is still tall enough for the button */
+    .hero {
+        height: 60vh; /* not too small, not too large */
     }
 
+    /* Keep CTA centered at the bottom of the hero */
+    .COA {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20; /* ensures it stays ON TOP of the image */
+    }
+
+    /* Mobile-friendly button size */
     #coa {
-        padding: 12px 26px;
+        padding: 10px 24px;
         font-size: 1rem;
         border-radius: 40px;
-    }
-}
-
-/* Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .COA {
-        bottom: 15px;        /* more compact spacing */
-    }
-
-    #coa {
-        padding: 10px 22px;
-        font-size: 0.9rem;
-        border-radius: 35px;
-        letter-spacing: 0.3px;
     }
 }
 
