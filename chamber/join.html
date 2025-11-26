@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker Chamber of Chamber</title>
+
+    <!-- Open Graph (Social Media Preview) -->
+    <meta property="og:title" content="Checker Chamber of Commerce" />
+    <meta property="og:description" content="Connecting businesses and the community through events, membership opportunities, and local support." />
+    <meta property="og:url" content="https://your-website-link.com" />
+    <meta property="og:image" content="images/hero1.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="join.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+        <img src="images/logo-transparent.png" alt="Chamber Logo" class="logo" />
+        <span class="site-name">Checker Chamber of Commerce</span>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-toggle" class="hamburger" aria-label="Open Navigation Menu">
+        &#9776;
+    </button>
+
+    <nav id="nav-menu" class="navigation">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="final.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h1>Membership Form</h1>
+        <div class="form-and-cards">
+            <section id="form-section">
+                <form action="thankyou.html" method="get">
+                    <!-- First Name -->
+                    <label for="first-name">First Name:</label>
+                    <input 
+                    type="text" 
+                    id="first-name" 
+                    name="firstName" 
+                    required 
+                    title="Enter your first name"
+                    autocomplete="given-name"><br>
+
+                    <!-- Last Name -->
+                    <label for="last-name">Last Name:</label>
+                    <input 
+                    type="text" 
+                    id="last-name" 
+                    name="lastName" 
+                    required 
+                    title="Enter your last name"
+                    autocomplete="family-name"><br>
+
+                    <!-- Organizational Title -->
+                    <label for="org-title">Organizational Title:</label>
+                    <input 
+                    type="text" 
+                    id="org-title" 
+                    name="organizationalTitle" 
+                    title="Enter your organizational title (letters, hyphens, and spaces only; minimum 7 characters)"
+                    autocomplete="organization-title"
+                    pattern="[A-Za-z\s-]{7,}"><br>
+
+                    <!-- Email -->
+                    <label for="email">Email Address:</label>
+                    <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    title="Enter a valid email address"
+                    autocomplete="email"
+                    placeholder="example@email.com"><br>
+
+                    <!-- Phone -->
+                    <label for="phone">Mobile Phone Number:</label>
+                    <input 
+                    type="tel" 
+                    id="phone" 
+                    name="mobilePhone" 
+                    required 
+                    title="Enter your mobile phone number"
+                    autocomplete="tel"><br>
+
+                    <!-- Organization Name -->
+                    <label for="org-name">Organization Name:</label>
+                    <input 
+                    type="text" 
+                    id="org-name" 
+                    name="organizationName" 
+                    required 
+                    title="Enter the name of your organization"
+                    autocomplete="organization"><br>
+
+                    <!-- Membership Level -->
+                    <label for="membership">Membership Level:</label>
+                    <select 
+                    id="membership" 
+                    name="membershipLevel" 
+                    required 
+                    title="Select your membership level">
+
+                    <option value="">-- Select Membership Level --</option>
+                    <option value="np">NP Membership (Non-profit - No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                    </select><br>
+
+                    <!-- Business Description -->
+                    <label for="description">Organization Description:</label>
+                    <textarea 
+                    id="description" 
+                    name="organizationDescription" 
+                    title="Describe your organization"></textarea><br>
+
+                    <!-- Timestamp -->
+                    <input 
+                    type="hidden" 
+                    id="timestamp" 
+                    name="timestamp"><br>
+
+                    <!-- Submit Button -->
+                    <input 
+                    type="submit" 
+                    value="Submit Application"><br>
+                </form>
+            </section>
+
+        <!-- RIGHT SIDE: MEMBERSHIP CARDS -->
+            <section class="cards-section">
+
+                <div class="member-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic benefits for starters.</p>
+                    <a href="#" data-modal="bronzeModal">Learn More</a>
+                </div>
+
+                <div class="member-card">
+                    <h3>Silver Membership</h3>
+                    <p>More value & perks.</p>
+                    <a href="#" data-modal="silverModal">Learn More</a>
+                </div>
+
+                <div class="member-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium features & exposure.</p>
+                    <a href="#" data-modal="goldModal">Learn More</a>
+                </div>
+
+                <div class="member-card">
+                    <h3>Platinum Membership</h3>
+                    <p>Top-tier benefits & VIP access.</p>
+                    <a href="#" data-modal="platinumModal">Learn More</a>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- ========== MODALS ========== -->
+
+        <!-- Bronze Modal -->
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>Access to monthly newsletter</li>
+                    <li>Basic event invitations</li>
+                    <li>5% event discount</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Silver Modal -->
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>Everything in Bronze</li>
+                    <li>Training workshop access</li>
+                    <li>10% event discount</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gold Modal -->
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>Everything in Silver</li>
+                    <li>Home page spotlight placement</li>
+                    <li>Special networking events</li>
+                    <li>20% event discount</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Platinum Modal -->
+        <div id="platinumModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Platinum Membership Benefits</h2>
+                <ul>
+                    <li>Everything in Gold</li>
+                    <li>VIP event access</li>
+                    <li>Free advertising package</li>
+                    <li>35% event discount</li>
+                </ul>
+            </div>
+    </div>
+</main>
+    
+</body>
+</html>
