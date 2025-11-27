@@ -180,3 +180,35 @@ input, button {
     font-size: 24px;
     cursor: pointer;
 }
+
+/* ANIMATION: Fade + Slide + Scale */
+@keyframes cardIntro {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Apply animation to all cards */
+.member-card {
+    opacity: 0;
+    animation: cardIntro 0.8s ease-out forwards;
+}
+
+/* Staggered appearance */
+.member-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.member-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.member-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.member-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
