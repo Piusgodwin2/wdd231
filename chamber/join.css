@@ -91,6 +91,7 @@ nav a:hover {
   color: #ffb703;
 }
 
+/* DESKTOP DEFAULT */
 .hamburger {
   display: none;
   background: none;
@@ -98,6 +99,30 @@ nav a:hover {
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
+}
+
+/* Hide menu on mobile by default */
+#nav-menu {
+  display: flex; /* desktop normal */
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* burger visible */
+  }
+
+  #nav-menu {
+    display: none;        /* hide menu */
+    flex-direction: column;
+   /* background: #111;*/
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #nav-menu.open {
+    display: block; /* show when toggled */
+  }
 }
 
 /* Layout container */
@@ -211,4 +236,23 @@ input, button {
 }
 .member-card:nth-child(4) {
     animation-delay: 0.8s;
+}
+
+/* ===============================
+   RESPONSIVE: MOBILE (≤ 768px)
+================================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
