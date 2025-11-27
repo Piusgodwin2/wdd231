@@ -1,3 +1,12 @@
+
+// Mobile menu toggle
+const toggleBtn = document.getElementById('menu-toggle');
+const navmenu = document.getElementById('nav-menu');
+
+toggleBtn.addEventListener('click', () => {
+    navmenu.classList.toggle('open');
+});
+
 const links = document.querySelectorAll("[data-modal]");
     const modals = document.querySelectorAll(".modal");
     const closes = document.querySelectorAll(".close");
