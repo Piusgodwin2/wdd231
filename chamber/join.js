@@ -26,3 +26,19 @@ const links = document.querySelectorAll("[data-modal]");
             }
         });
     });
+
+    // Set timestamp when the form loads
+window.addEventListener("DOMContentLoaded", () => {
+    const timestampField = document.getElementById("timestamp");
+
+    // Generate current date & time (ISO or readable format)
+    const now = new Date();
+
+    // Option 1: Human-readable format
+    const formatted = now.toLocaleString(); 
+
+    // Option 2: ISO format (YYYY-MM-DDTHH:MM:SS)
+    // const formatted = now.toISOString();
+
+    timestampField.value = formatted;
+});
