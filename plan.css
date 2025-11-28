@@ -1,0 +1,81 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Container ===== */
+#site-contain {
+    width: 90%;
+    max-width: 900px;
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #e85d04; /* Primary color */
+}
+
+h3 {
+    margin-top: 20px;
+    color: #6a040f;
+    border-left: 5px solid #e85d04;
+    padding-left: 10px;
+}
+
+/* ===== Text Formatting ===== */
+p strong {
+    color: #6a040f;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* ===== Image Styling ===== */
+#site-contain img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #e85d04;
+    border-radius: 10px;
+}
+
+/* ===== Horizontal Rule ===== */
+hr {
+    width: 90%;
+    margin: 10px auto 20px;
+    border: 1px solid #ddd;
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 600px) {
+    #site-contain {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
