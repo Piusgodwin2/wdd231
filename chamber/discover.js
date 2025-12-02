@@ -1,3 +1,16 @@
+// display the current year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// display the last modified date
+document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+
+// Mobile menu toggle
+const toggleBtn = document.getElementById('menu-toggle');
+const navmenu = document.getElementById('nav-menu');
+
+toggleBtn.addEventListener('click', () => {
+    navmenu.classList.toggle('open');
+});
 
 import {places} from './data/place.mjs';
 console.log(places);
@@ -45,3 +58,31 @@ function displayPlaces(data) {
 }
 
 displayPlaces(places);
+
+const messageBox = document.querySelector("#visit-message");
+
+// Get last visit from localStorage
+let lastVisit = localStorage.getItem("lastVisit");
+
+// Get the current timestamp
+let now = Date.now();
+
+if (!lastVisit) {
+    // First visit
+    messageBox.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    // Calculate days difference
+    let difference = now - Number(lastVisit);
+    let daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    if (daysPassed < 1) {
+        messageBox.textContent = "Back so soon! Awesome!";
+    } else if (daysPassed === 1) {
+        messageBox.textContent = "You last visited 1 day ago.";
+    } else {
+        messageBox.textContent = `You last visited ${daysPassed} days ago.`;
+    }
+}
+
+// Save the current visit time
+localStorage.setItem("lastVisit", now);

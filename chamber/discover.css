@@ -232,3 +232,32 @@ h1 {
 .card:nth-child(6) { grid-area: card6; }
 .card:nth-child(7) { grid-area: card7; }
 .card:nth-child(8) { grid-area: card8; }
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  background: #004466;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
