@@ -1,0 +1,8 @@
+body {
+    background-image: url("Img/food-background.webp"); /*i used an image as the background of the site*/
+    background-size: cover;    /* Make it cover the whole screen */
+    background-repeat: no-repeat; 
+    background-position: center;
+    font-family: "poppins", sans-serif, Arial;
+}
+
