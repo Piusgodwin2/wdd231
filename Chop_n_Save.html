@@ -9,7 +9,7 @@
 
     <!-- Open Graph (Social Media Preview) -->
     <meta property="og:title" content="Chop n Save" />
-    <meta property="og:description" content="The most convinent way to order food." />
+    <meta property="og:description" content="Your to go store for affordable meals" />
     <meta property="og:url" content="https://piusgodwin2.github.io/wdd231/Chop_n_Save.html" />
     <meta property="og:image" content="Img/logo.png"/>
     <meta property="og:type" content="website" />
@@ -31,6 +31,47 @@
 
 </head>
 <body>
+    <header>
+        <!-- The logo-->
+        <div class="logo-container">
+            <img src="Img/logo.png" alt="Logo for chop n save" class="logo">
+        </div>
+        <div class="delivery-time">
+                <i class="fa-solid fa-truck-fast"></i>
+                Order Online 9am - 9pm
+             </div>
+        <!-- Hamburger icon for mobile-->
+         <button id="menu-toggle" class="hamburger" aria-label="menu">#9776</button>
+             <!--Navigation bar-->
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn" id="menu-btn">Store Location</button>
+                        <ul class="dropdown-content" id="menu-list">
+                            <li>Lekki,Ajesco filling station. Lagos</li>
+                            <li>Atimbo, Unical gate. Calabar</li>
+                            <li>Nwaniba, Unical gate. Uyo</li>
+                        </ul>
+                    </div>
+                    <li><a href="#">Promos</a></li>
+                </ul>
+             </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="Img/HomePageBanner.jpg" alt="banner image">
+            <p class="text">YOUR PLACE FOR <br>AFFORDABLE MEALS</p>
+        </div>
+
+        <!-- Our meals sections-->
+         <section class="Menu" id="Menu">
+            <h1>Our Menu</h1>
+            <!-- card will display here-->
+             <div id="menu-cards"></div>
+         </section>
+    </main>
     
     <script src="Chop_n_Save.js" type="module"></script>
 </body>
