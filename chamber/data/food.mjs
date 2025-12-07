@@ -1,43 +1,51 @@
 
-    export const meals = [
-    {
-      "name": "Jollof Rice with Fried Chicken",
-      "description": "Classic Nigerian jollof rice served with crispy fried chicken.",
-      "photo": "webp"
-    },
-    {
-      "name": "Fried Rice & Plantain",
-      "description": "Colorful fried rice with vegetables and sweet fried plantains.",
-      "photo": "=webp"
-    },
-    {
-      "name": "Shawarma (Chicken)",
-      "description": "Juicy Nigerian-style chicken shawarma with sausage and cream.",
-      "photo": "webp"
-    },
-    {
-      "name": "Chicken & Chips",
-      "description": "Crispy fried chicken served with French fries.",
-      "photo": "webp"
-    },
-    {
-      "name": "Puff-Puff",
-      "description": "Soft and fluffy deep-fried sweet dough balls.",
-      "photo": "webp"
-    },
-    {
-      "name": "Samosa",
-      "description": "Crispy triangle pastry stuffed with minced beef and vegetables.",
-      "photo": "webp"
-    },
-    {
-      "name": "Spring Roll",
-      "description": "Crispy vegetable-filled roll, commonly found in Nigerian small chops.",
-      "photo": "webp"
-    },
-    {
-      "name": "Pepper Gizzard",
-      "description": "Spicy stir-fried gizzard in rich pepper sauce.",
-      "photo": "webp"
-    }
-  ]
+  export const meals = [
+  {
+    "name": "Jollof Rice with Fried Chicken",
+    "description": "Classic Nigerian jollof rice served with crispy fried chicken.",
+    "price": "2,500",
+    "photo": "Jellof_rice.webp"
+  },
+  {
+    "name": "Fried Rice & Chicken",
+    "description": "Colorful fried rice with chicken and a bottle of coke.",
+    "price": "2,000",
+    "photo": "MAX-FRIED-RICE-MEAL.jpg"
+  },
+  {
+    "name": "Shawarma (Chicken)",
+    "description": "Juicy Nigerian-style chicken shawarma with sausage and cream.",
+    "price": "3,500",
+    "photo": "Food1.webp"
+  },
+  {
+    "name": "Chicken & Chips",
+    "description": "Crispy fried chicken served with French fries.",
+    "price": "2,000",
+    "photo": "Food3.webp"
+  },
+  {
+    "name": "Asun Rice (Spicy Goat Meat)",
+    "description": "delicious spicy goat meat served with white rice.",
+    "price": "4,000",
+    "photo": "Food5.webp"
+  },
+  {
+    "name": "Egusi Soup",
+    "description": "A rich melon seed soup served with Eba.",
+    "price": "4,000",
+    "photo": "egusi_soup.webp"
+  },
+  {
+    "name": "Beverages",
+    "description": "Sodas, water.",
+    "price": "500",
+    "photo": "Beverages.webp"
+  },
+  {
+    "name": "Pepper Gizzard",
+    "description": "Spicy stir-fried gizzard in rich pepper sauce.",
+    "price": "3,000",
+    "photo": "Food2.webp"
+  }
+]
