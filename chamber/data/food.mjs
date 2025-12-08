@@ -10,7 +10,7 @@
     "name": "Fried Rice & Chicken",
     "description": "Colorful fried rice with chicken and a bottle of coke.",
     "price": 2000,
-    "photo": "MAX-FRIED-RICE-MEAL.jpg"
+    "photo": "MAX-FRIED-RICE-MEAL.webp"
   },
   {
     "name": "Shawarma (Chicken)",
@@ -47,5 +47,53 @@
     "description": "Spicy stir-fried gizzard in rich pepper sauce.",
     "price": 3000,
     "photo": "Food2.webp"
-  }
+  },
+
+  {
+    "name": "Chicken Salad",
+    "description": "A healthy chicken salad with fresh vegetables.",
+    "price": 3000,
+    "photo": "CHICKENSalad.webp"
+  },
+  {
+    "name": "Chicken Pies",
+    "description": "Savory chicken pies with a flaky crust.",
+    "price": 1500,
+    "photo": "CHICKEN-PIES.webp"
+  },
+  {
+    "name": "Meals & Chips",
+    "description": "Hearty meal served with a side of crispy chips.",
+    "price": 3500,
+    "photo": "MealWithChips.webp"
+  },
+  {
+    "name": "Chickwhizz White scaled",
+    "description": "Toasted bread filled with spicy chicken and veggies.",
+    "price": 3500,
+    "photo": "Chickwhizz_WHITE-scaled.webp"
+  },
+  {
+    "name": "Fried Yam & Sauce",
+    "description": "Fried yam served with a spicy tomato sauce.",
+    "price": 4000,
+    "photo": "SPICY-YAM.webp"
+  },
+  {
+    "name": "Pasta Salad",
+    "description": "A refreshing pasta salad with vegetables and dressing.",
+    "price": 4000,
+    "photo": "PASTA-SALAD.webp"
+  },
+  {
+    "name": "Chicken",
+    "description": "Whole fried chicken, crispy and golden brown.",
+    "price": 6000,
+    "photo": "Full_chicken.webp"
+  },
+  
+  
+  
+  
+
 ]
