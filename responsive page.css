@@ -37,26 +37,27 @@
 
 /* ========= 768px (iPad / Large phones) ========= */
 @media (max-width: 768px) {
-  /* Show hamburger */
   .hamburger {
     display: block;
     color: #000;
+    position: relative;
+    z-index: 50; /* ensures button stays on top */
   }
 
   /* Hide nav by default */
-  nav {
+   nav {
     display: none;
     width: 100%;
     background: #fff;
     position: absolute;
-    top: 90px;
+    top: 100%; /* appears directly under header */
     left: 0;
     padding: 1rem 0;
     z-index: 20;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    height: auto;
   }
 
-  /* When JS toggles .active */
   nav.active {
     display: block;
   }
@@ -76,10 +77,11 @@
     padding: 6px 10px;
   }
 
-  .banner {
+ .banner {
     height: 380px;
+    position: relative;
+    z-index: 1;
   }
-
   .banner p {
     font-size: 1.8rem;
     left: 40%;
