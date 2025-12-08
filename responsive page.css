@@ -37,29 +37,26 @@
 
 /* ========= 768px (iPad / Large phones) ========= */
 @media (max-width: 768px) {
-
-  /* ===== HAMBURGER ===== */
+  /* Show hamburger */
   .hamburger {
     display: block;
     color: #000;
-    position: relative;
-    z-index: 50;
   }
 
-  /* ===== NAVIGATION ===== */
+  /* Hide nav by default */
   nav {
     display: none;
     width: 100%;
     background: #fff;
     position: absolute;
-    top: 100%;
+    top: 90px;
     left: 0;
     padding: 1rem 0;
     z-index: 20;
-    height: auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
+  /* When JS toggles .active */
   nav.active {
     display: block;
   }
@@ -67,24 +64,20 @@
   nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
   }
 
   nav li {
     margin: 10px 0;
   }
 
-  /* ===== DELIVERY TIME ===== */
+  /* Delivery time box smaller */
   .delivery-time {
     font-size: 0.75rem;
     padding: 6px 10px;
   }
 
-  /* ===== BANNER ===== */
   .banner {
     height: 380px;
-    position: relative;
-    z-index: 1;
   }
 
   .banner p {
@@ -92,7 +85,7 @@
     left: 40%;
   }
 
-  /* ===== MEAL / CARD SECTION ===== */
+   /* ===== MEAL / CARD SECTION ===== */
   #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -102,22 +95,22 @@
   }
 
   .card {
-    width: 45%;          /* 2 cards per row on tablets */
+    width: 45%;
     margin: 0 auto;
   }
 
   .card img {
-    height: 160px;        /* Slightly reduced height so layout stays stable */
+    height: 160px;
     object-fit: cover;
   }
 
-  /* ===== ABOUT SECTION ===== */
+  /* About section */
   .info {
     flex-direction: column;
     text-align: center;
   }
 
-  /* ===== FOOTER ===== */
+  /* Footer */
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -127,8 +120,6 @@
     width: 80%;
   }
 }
-
-
 
 /* ========= 600px (Small phones) ========= */
 @media (max-width: 600px) {
@@ -152,13 +143,23 @@
     left: 50%;
   }
 
+  /* ===== MEAL SECTION / CARDS ===== */
   #card-container {
     gap: 15px;
+    padding: 10px;
+    justify-content: center;
   }
 
   .card {
     width: 90%;
+    margin: 0 auto;
   }
+
+  .card img {
+    height: 150px;
+    object-fit: cover;
+  }
+
 
   form {
     width: 90%;
@@ -217,4 +218,5 @@
   header {
     padding: 0.5rem;
   }
+  
 }
