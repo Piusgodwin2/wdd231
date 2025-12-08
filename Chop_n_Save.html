@@ -71,7 +71,57 @@
             <!-- cards for the menu will appear here-->
              <div id="card-container"></div>       
         </section>
+        <!--About Us-->
+        <section class="info-box">
+            <h1>About Us</h1>
+            <div class="info">
+                <!--<img src="Img/mockup.png" alt="mockup image of chop n save app">-->
+                <p><strong>About Chop N Save:</strong> Delicious Meals, Affordable Prices
+                    At Chop N Save, our mission is simple: to make delicious, high-quality meals accessible to everyone. 
+                    We believe that enjoying great food shouldn't break the bank.
+
+                    Our primary aim is to offer a wide variety of satisfying dishes at truly affordable prices, ensuring you can "chop" (eat) well and "save" money every day. Whether you're grabbing a quick lunch or feeding the whole family, 
+                    Chop N Save is your go-to spot for value and flavor.</p>
+            </div>
+        </section>
+        <section class="form-box">
+            <h2>Form</h2>
+            <p>You can drop your complains or rate our service here, we will treat you better.</p>
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"  placeholder="Piusgodwin@gmail.com" required>
+
+                <label for="Rate Us">Rate Us:</label>
+                <input type="radio" name="rating" id="star5" value="5">
+                <label for="star5" class="5">Poor</label>
+
+                <input type="radio" name="rating" id="star4" value="4">
+                <label for="star4" class="4">Just There</label>
+
+                <input type="radio" name="rating" id="star3" value="3">
+                <label for="star3" class="3">Good</label>
+
+                <input type="radio" name="rating" id="star2" value="2">
+                <label for="star2" class="2">Very Good</label>
+
+                <input type="radio" name="rating" id="star1" value="1">
+                <label for="star1" class="1">Great</label>
+
+                   <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="type here" required></textarea>
+
+                <button type="submit">Review</button>
+            </form>
+        </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Chop n Save. All rights reserved.</p>
+        </div>
+    </footer>
     
     <script src="Chop_n_Save.js" type="module"></script>
 </body>
