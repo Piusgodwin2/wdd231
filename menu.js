@@ -62,35 +62,4 @@ function displayMealsByGroup(meals, pricegroup, container) {
 // CALL FUNCTION
 displayMealsByGroup(meals, pricegroup, container);
 
-      
-
-
-/* write a function to display the 3k and 4k meals
-const container = document.querySelector('#menu-container');
-function displayMenu(menu){
-    menu.forEach(meal => {
-
-        //create a div for each meal
-
-        const daily = document.createElement('div');
-        daily.classList.add('daily');
-
-        
-        daily.innerHTML = `
-            <img src = "Img/${meal.photo}" alt="${meal.name}">
-            <h3>${meal.name}</h3>
-            <p>${meal.description}</p>
-            <h3>₦${meal.price}</h3>
-            <button class="add-btn">ORDER</button>
-            `;
-        // append the element created in the daily to the html container
-        container.appendChild(daily);
-
-        
-    });
-};
-// call the function to display the meals filtered by price
-displayMenu(filterprice(meals));// end of displayMenu for 3k and 4k*/
-//create a div for each meal
-
 
