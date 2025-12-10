@@ -8,9 +8,72 @@
     <link rel="icon" href="Img/favicon.ico"/>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="Chop_n_Save.css"/>
+    <link rel="stylesheet" href="menu.css"/>
 </head>
 <body>
-    
+    <header>
+        <!-- The logo-->
+        <div class="logo-container">
+            <img src="Img/logo.png" alt="Logo for chop n save" class="logo">
+        </div>
+        <div class="delivery-time">
+                <i class="fa-solid fa-truck-fast"></i>
+                Order Online 9am - 9pm
+             </div>
+        <!-- Hamburger icon for mobile-->
+         <button id="menu-toggle" class="hamburger" aria-label="menu">
+             <i class="fa-solid fa-bars"></i>
+         </button>
+             <!--Navigation bar-->
+            <nav>
+                <ul>
+                    <li><a href="Chop_n_Save.html" class="active">Home</a></li>
+                    <li><a href="menu.html" target="_blank">Menu</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn" id="menu-btn">Store Location</button>
+                        <ul class="dropdown-content" id="menu-list">
+                            <li>Lekki, Ajesco filling station. Lagos</li>
+                            <li>Atimbo, Unical gate. Calabar</li>
+                            <li>Nwaniba, Unical gate. Uyo</li>
+                        </ul>
+                    </div>
+                    <li><a href="#">Promos</a></li>
+                </ul>
+             </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="Img/Meal_page.jpg" alt="meal image">
+        </div>
+        <section class="menu-section">
+            <h1>OUR MENU</h1>
+            <div class="icons">
+                <p>
+                    <img src="Img/Chips_Icon.webp" alt="icon for fries">
+                    Fries, Sides & chicken
+                </p>
+                <p>
+                    <img src="Img/Everyday_Icon.webp" alt="icon for meals">
+                    Everyday Value Meals
+                </p>
+                <p>
+                    <img src="Img/Burger_Icon.webp" alt="icon for burger">
+                    Burgers, Wraps & Sandwiches
+                </p>
+            </div>
+            <h3>Everyday Value Meals</h3>
+            <div id="menu-container">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+
+            <!-- To display FOod 2k to 1500-->
+             <h3>Frieds, Sides and Chicken</h3>
+            <div id="menu">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="menu.js" type="module"></script>
 </body>
 </html>

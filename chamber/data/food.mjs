@@ -3,13 +3,13 @@
   {
     "name": "Jollof Rice with Fried Chicken",
     "description": "Nigerian jollof rice served with fried chicken.",
-    "price": 2500,
+    "price": 3000,
     "photo": "Jellof_rice.webp"
   },
   {
     "name": "Fried Rice & Chicken",
     "description": "Colorful fried rice with chicken and a bottle of coke.",
-    "price": 2000,
+    "price": 3000,
     "photo": "MAX-FRIED-RICE-MEAL.webp"
   },
   {
@@ -45,7 +45,7 @@
   {
     "name": "Pepper Gizzard",
     "description": "Spicy stir-fried gizzard in rich pepper sauce.",
-    "price": 3000,
+    "price": 2500,
     "photo": "Food2.webp"
   },
 
@@ -82,7 +82,7 @@
   {
     "name": "Pasta Salad",
     "description": "A refreshing pasta salad with vegetables and dressing.",
-    "price": 4000,
+    "price": 2000,
     "photo": "PASTA-SALAD.webp"
   },
   {
@@ -91,9 +91,11 @@
     "price": 6000,
     "photo": "Full_chicken.webp"
   },
+  {
+    "name": "Top Package",
+    "description": "Rice, Fried Chicken, Salad, Drink, burger.",
+    "price": 7500,
+    "photo": "Big_Boyz.webp"
+  },
   
-  
-  
-  
-
 ]
