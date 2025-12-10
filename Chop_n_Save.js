@@ -16,7 +16,6 @@ menuToggle.addEventListener("click", () => {
     }
 });
 
-
 const btn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu-list");
 const dropdown = document.querySelector(".dropdown");
