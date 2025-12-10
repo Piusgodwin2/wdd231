@@ -4,58 +4,64 @@ console.log(meals);
 
 const container = document.querySelector('#menu-container');
 
-//Function to display meals price respectively
+// PRICE GROUP RULES
 const pricegroup = {
-    "Everyday Meals": meal => meal.price == 3000 || meal.price ==4000,
+    "Everyday Meals": meal => meal.price == 3000 || meal.price == 4000,
     "Frieds, Sides, Chicken": meal => meal.price == 3500 || meal.price == 2000,
     "Top Meals": meal => meal.price >= 6000,
     "Beverages": meal => meal.price == 500 || meal.price == 1500
-
 };
 
-// FUNCTION THAT DISPLAYS EVERYTHING
+// FUNCTION TO DISPLAY MEALS GROUPED BY PRICE
 function displayMealsByGroup(meals, pricegroup, container) {
 
-    // Loop through all groups
     Object.entries(pricegroup).forEach(([groupName, conditionFn]) => {
 
-        // Filter meals for this group
+        // Get meals for this group
         const groupMeals = meals.filter(conditionFn);
 
-        // Skip empty groups
         if (groupMeals.length === 0) return;
 
-        // Create Group Wrapper
+        // Create wrapper for each group
         const groupWrapper = document.createElement("div");
         groupWrapper.className = "group-section";
 
-        // Create Group Header
-        const header = document.createElement("h2");
+        // Group heading
+        const header = document.createElement("h3");
         header.textContent = groupName;
         groupWrapper.appendChild(header);
 
-        // Create Cards for Each Meal
+        // Flex row for cards
+        const cardRow = document.createElement("div");
+        cardRow.className = "group-cards";
+
+        // Create each card
         groupMeals.forEach(meal => {
-            const daily = document.createElement("div");
-            daily.className = "daily";
-              
-            daily.innerHTML = `
-                <img src = "Img/${meal.photo}" alt="${meal.name}">
+            const card = document.createElement("div");
+            card.className = "daily";
+
+            card.innerHTML = `
+                <img src="Img/${meal.photo}" alt="${meal.name}">
                 <h3>${meal.name}</h3>
                 <p>${meal.description}</p>
                 <h3>₦${meal.price}</h3>
                 <button class="add-btn">ORDER</button>
-                `;
-            groupWrapper.appendChild(daily);
+            `;
+
+            cardRow.appendChild(card);
         });
 
-        // Append whole group to container
+        // Add row of cards to the group wrapper
+        groupWrapper.appendChild(cardRow);
+
+        // Add entire group block to main container
         container.appendChild(groupWrapper);
     });
 }
 
-// 👉 CALL THE FUNCTION
+// CALL FUNCTION
 displayMealsByGroup(meals, pricegroup, container);
+
       
 
 
