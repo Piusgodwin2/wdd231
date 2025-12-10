@@ -1,20 +1,22 @@
 // ===== MOBILE NAVIGATION TOGGLE =====
 const menuToggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav");
+const navList = document.querySelector("nav ul");
 
 menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
+    navList.classList.toggle("show");
 
-    // Toggle hamburger → X icon
     const icon = menuToggle.querySelector("i");
-    if (nav.classList.contains("active")) {
+
+    if (navList.classList.contains("show")) {
         icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");   // change to close icon
+        icon.classList.add("fa-xmark");
     } else {
         icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");    // change back to menu icon
+        icon.classList.add("fa-bars");
     }
 });
+
+
 
 const btn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu-list");

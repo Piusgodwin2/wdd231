@@ -1,42 +1,170 @@
-/* ===== RESPONSIVE ===== */
+/* =========================================================
+   UNIVERSAL RESPONSIVE MEDIA QUERIES
+   ========================================================= */
 
-/* 768px - Nav Fix */
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 9999; /* Highest layer */
-    display: none;
+/* ========== 1024px — Small laptops / large tablets ========== */
+@media (max-width: 1024px) {
+
+  nav ul {
+    gap: 1rem;
   }
 
-  nav.active {
-    display: block;
+  .banner p {
+    font-size: 2.5rem;
+    left: 25%;
   }
 
-  /* Cards side-by-side */
-  .card {
-    width: 45%;
+  .info {
+    gap: 15px;
   }
 }
 
-/* 600px - smaller phones */
+
+/* ========== 900px — Tablets ========== */
+@media (max-width: 900px) {
+
+  header {
+    padding: 1rem;
+  }
+
+  /* Show hamburger, hide desktop menu */
+  .hamburger {
+    display: block;
+    color: #000;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 99;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Fix dropdown inside mobile menu */
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+  }
+
+  .banner p {
+    font-size: 2.2rem;
+    left: 35%;
+  }
+
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #card-container {
+    gap: 15px;
+  }
+}
+
+
+/* ========== 768px — iPads / Medium Tablets ========== */
+@media (max-width: 768px) {
+
+  /* Banner */
+  .banner {
+    height: 400px;
+  }
+
+  .banner p {
+    font-size: 2rem;
+    top: 35%;
+    left: 40%;
+  }
+
+  /* Cards */
+  .card {
+    width: 45%;
+  }
+
+  .delivery-time {
+    padding: 6px 12px;
+  }
+}
+
+
+/* ========== 600px — Large Phones ========== */
 @media (max-width: 600px) {
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .banner {
+    height: 350px;
+  }
+
+  .banner p {
+    font-size: 1.8rem;
+    left: 50%;
+    width: 90%;
+  }
+
   .card {
     width: 90%;
   }
 
-  .card img {
-    height: 160px;
+  form {
+    width: 90%;
+  }
+
+  .footer-container img {
+    width: 100%;
   }
 }
 
-/* 360px */
+
+/* ========== 480px — Small Android Phones ========== */
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  nav ul {
+    width: 180px;
+  }
+
+  .banner p {
+    font-size: 1.6rem;
+    top: 40%;
+  }
+
+  .delivery-time {
+    font-size: .8rem;
+  }
+}
+
+
+/* ========== 360px — Very small phones ========== */
 @media (max-width: 360px) {
+
+  .banner p {
+    font-size: 1.4rem;
+  }
+
   .card {
+    width: 100%;
+  }
+
+  form {
     width: 100%;
   }
 }
