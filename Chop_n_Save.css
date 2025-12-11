@@ -400,6 +400,10 @@ footer {
 .footer-text {
   flex: 1;
 }
+.footer-text a {
+  color: #e85d04;
+  text-decoration: none;
+}
 
 /* Responsive (stack on small screens) */
 @media (max-width: 600px) {
