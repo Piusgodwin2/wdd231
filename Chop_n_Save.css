@@ -89,53 +89,6 @@ nav a.active{
     display: none; /* Hidden on desktop */
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px 15px;
-    }
-
-    .delivery-time {
-        width: 100%;
-        justify-content: center;
-        margin: 5px 0;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 1001;
-        color: #000814;
-    }
-
-    .navigation {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 250px;
-        height: 100%;
-        background-color: #fff;
-        flex-direction: column;
-        padding-top: 60px;
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
-    }
-
-    .navigation ul {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .navigation.active {
-        right: 0;
-    }
-}
-
 /*== delivery time box ==*/
 .delivery-time {
     display: flex;
@@ -202,7 +155,6 @@ nav a.active{
 #menu-section {
   position: relative;
   z-index: 1; /* Prevent nav overlap on Android */
-  background: #f9f9f9;
   padding: 40px 0;
 }
 
