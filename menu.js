@@ -1,4 +1,13 @@
-import { meals } from "../chamber/data/food.mjs";
+// mobile toggle menu
+ const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+
+import { meals } from "./chamber/data/food.mjs";
 
 // MAIN CONTAINER
 const container = document.querySelector("#menu-container");

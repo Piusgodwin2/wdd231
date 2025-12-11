@@ -1,3 +1,4 @@
+ // mobile toggle menu
  const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -6,7 +7,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // import the meals data
-import {meals} from '../chamber/data/food.mjs';
+import {meals} from './chamber/data/food.mjs';
 console.log(meals);
 
  // filter meals under 3000 naira
