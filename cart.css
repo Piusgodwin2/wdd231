@@ -1,0 +1,158 @@
+/* ================================
+   GENERAL PAGE STYLING
+   ================================ */
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #222;
+}
+
+h2 {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+
+/* ================================
+   CART ROWS
+   ================================ */
+.cart-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px 120px 90px 90px;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Product image */
+.cart-row img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product name */
+.cart-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Qty Controls */
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-controls button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.qty-controls button:hover {
+    background: #ccc;
+}
+
+/* Remove button */
+.remove-btn {
+    border: none;
+    background: #ff1766;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #cc004f;
+}
+
+/* Total price */
+.total {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* ================================
+   EMPTY CART MESSAGE
+   ================================ */
+#cart-items p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+   ================================ */
+
+@media (max-width: 900px) {
+    .cart-row {
+        grid-template-columns: 70px 1fr 80px 90px;
+        grid-template-areas:
+        "img name name remove"
+        "img price qty total";
+    }
+
+    .cart-row img { grid-area: img; }
+    .cart-name { grid-area: name; }
+    .cart-row span:nth-of-type(2) { grid-area: price; }
+    .qty-controls { grid-area: qty; }
+    .total { grid-area: total; }
+    .remove-btn { grid-area: remove; }
+}
+
+@media (max-width: 600px) {
+    .cart-row {
+        grid-template-columns: 60px 1fr 80px;
+        grid-template-areas:
+        "img name remove"
+        "img qty total"
+        "img price total";
+    }
+
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; }
+}
+
+@media (max-width: 400px) {
+    .cart-row {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas:
+        "img name"
+        "img price"
+        "img qty"
+        "img total"
+        "img remove";
+    }
+
+    .remove-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

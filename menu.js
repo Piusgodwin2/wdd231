@@ -1,8 +1,7 @@
-// import the meal data from the food.mjs module
-import {meals} from '../chamber/data/food.mjs';
-console.log(meals);
+import { meals } from "../chamber/data/food.mjs";
 
-const container = document.querySelector('#menu-container');
+// MAIN CONTAINER
+const container = document.querySelector("#menu-container");
 
 // PRICE GROUP RULES
 const pricegroup = {
@@ -12,81 +11,41 @@ const pricegroup = {
     "Beverages": meal => meal.price == 500 || meal.price == 1500
 };
 
-// FUNCTION TO DISPLAY MEALS GROUPED BY PRICE
+// DISPLAY MEALS
 function displayMealsByGroup(meals, pricegroup, container) {
+    Object.entries(pricegroup).forEach(([groupName, condition]) => {
 
-    Object.entries(pricegroup).forEach(([groupName, conditionFn]) => {
-
-        // Get meals for this group
-        const groupMeals = meals.filter(conditionFn);
-
+        const groupMeals = meals.filter(condition);
         if (groupMeals.length === 0) return;
 
-        // Create wrapper for each group
-        const groupWrapper = document.createElement("div");
-        groupWrapper.className = "group-section";
+        const groupWrap = document.createElement("div");
+        groupWrap.className = "group-section";
 
-        // Group heading
         const header = document.createElement("h3");
         header.textContent = groupName;
-        groupWrapper.appendChild(header);
+        groupWrap.appendChild(header);
 
-        // Flex row for cards
-        const cardRow = document.createElement("div");
-        cardRow.className = "group-cards";
+        const row = document.createElement("div");
+        row.className = "group-cards";
 
-        // Create each card
         groupMeals.forEach(meal => {
             const card = document.createElement("div");
             card.className = "daily";
 
             card.innerHTML = `
                 <img src="Img/${meal.photo}" alt="${meal.name}">
-                <h3>${meal.name}</h3>
+                <h3 class="meal-name">${meal.name}</h3>
                 <p>${meal.description}</p>
-                <h3>₦${meal.price}</h3>
-                <button class="add-btn">ORDER</button>
+                <h3 class="meal-price">₦${meal.price}</h3>
+                <button class="add-btn" data-id="${meal.id}">ORDER</button>
             `;
 
-            cardRow.appendChild(card);
+            row.appendChild(card);
         });
 
-        // Add row of cards to the group wrapper
-        groupWrapper.appendChild(cardRow);
-
-        // Add entire group block to main container
-        container.appendChild(groupWrapper);
+        groupWrap.appendChild(row);
+        container.appendChild(groupWrap);
     });
 }
 
-// CALL FUNCTION
 displayMealsByGroup(meals, pricegroup, container);
-
- // Add to cart button
-    card.querySelector(".add-btn").addEventListener("click", () => {
-        addToCart(meals);
-    });
-
-// Add to cart function
-function addToCart(meal) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const existing = cart.find(item => item.name === meal.name);
-
-    if (existing) {
-        existing.quantity++;
-    } else {
-        cart.push({
-            name: meal.name,
-            price: meal.price,
-            image: meal.image,
-            quantity: 1
-        });
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    // Go to cart page
-    window.location.href = "cart.html";
-}
-
