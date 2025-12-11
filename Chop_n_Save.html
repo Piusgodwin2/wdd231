@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chop n Save | Home</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Official homepage chop n Save your to go store for affordable meals"/>
+
+    <!-- Open Graph (Social Media Preview) -->
+    <meta property="og:title" content="Chop n Save"/>
+    <meta property="og:description" content="Your to-go store for affordable meals"/>
+    <meta property="og:url" content="https://your-website-link.com"/>
+    <meta property="og:image" content="Img/favicon.ico"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- Favicon -->
+    <link rel="icon" href="Img/favicon.ico"/>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="Chop_n_Save.css"/>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Img/logo.png" alt="Chamber Logo" class="logo"/>
+        </div>
+        <div class="delivery-time">
+            <i class="fa-solid fa-truck-fast"></i>
+            Order Online 9am - 9pm
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="hamburger" aria-label="Open Navigation Menu">
+            &#9776;
+        </button>
+
+        <nav id="nav-menu" class="navigation">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Store Location</a></li>
+                <li><a href="#">Promos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="Img/HomePageBanner.jpg" alt="banner image">
+        </div>
+
+            <!-- Our meals sections-->
+          <section id="menu-section">
+          <h1>Our Menu</h1>
+
+          <!-- Cards will be displayed here -->
+          <div id="card-container"></div>
+        </section>
+
+        <!--About Us-->
+        <section class="info-box">
+            <h1>About Us</h1>
+            <div class="info">
+                <!--<img src="Img/mockup.png" alt="mockup image of chop n save app">-->
+                <p><strong>About Chop N Save:</strong> Delicious Meals, Affordable Prices
+                    At Chop N Save, our mission is simple: to make delicious, high-quality meals accessible to everyone. 
+                    We believe that enjoying great food shouldn't break the bank.
+                    Our primary aim is to offer a wide variety of satisfying dishes at truly affordable prices, ensuring you can "chop" (eat) well and "save"
+                    Whether you're grabbing a quick lunch or feeding the whole family, 
+                    Chop N Save is your go-to spot for value and flavor.</p>
+            </div>
+        </section>
+        <section class="form-box">
+            <h2>Form</h2>
+            <p>You can drop your complaints or rate our service here; we will treat you better.</p>
+            <form method="get">
+                <label>Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" name="email"  placeholder="Piusgodwin@gmail.com" required>
+
+                   <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="type here" required></textarea>
+
+                <button type="submit">Review</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <img src="Img/mockup.png" alt="mockup image of chop n save app">
+
+            <div class="footer-text">
+            <p><strong>Download our app for 30% discount on first order.</strong></p>
+            <p>You can order from our website</p>
+
+            <p><strong>Address:</strong>
+                Lekki, Ajesco filling station. Lagos <br>
+                Atimbo, Unical gate. Calabar <br>
+                Nwaniba, Unical gate. Uyo
+            </p>
+            </div>
+        </div><hr>
+        <div>
+            <P><strong>Reach Us:</strong> Chop_n_Save.ng@gmail.com</P>
+            <p>&copy; 2025 Chop n Save. All rights reserved.</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://github.com/Piusgodwin2?tab=repositories" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://facebook.com/raphaelodu.diwa" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+    </div>
+    </footer>
+
+    <script src="Chop_n_Save.js" type="module"></script>
+</body>
+</html>
