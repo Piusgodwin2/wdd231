@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Review</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        .review-box {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .review-box h2 {
+            margin-bottom: 15px;
+        }
+        .review-item {
+            margin-bottom: 10px;
+        }
+        .review-item span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="review-box">
+        <h2>Submitted Details</h2>
+
+        <p class="review-item"><span>Name:</span> <span id="display-name"></span></p>
+        <p class="review-item"><span>Email:</span> <span id="display-email"></span></p>
+        <p class="review-item"><span>Message:</span></p>
+        <p id="display-message"></p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById('display-name').textContent = params.get('name');
+        document.getElementById('display-email').textContent = params.get('email');
+        document.getElementById('display-message').textContent = params.get('message');
+    </script>
+</body>
+</html>
