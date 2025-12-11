@@ -86,58 +86,6 @@ nav a.active{
     border-bottom: #e85d04;
 }
 
-/* STYLE THE DROP DOWN*/
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    cursor: pointer;
-    border: none;
-    background: none;
-    color:#000814 ;
-}
-
-/* Dropdown list */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: #ffffff;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    min-width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    overflow: hidden;
-    z-index: 10;
-}
-
-/* Each menu item */
-.dropdown-content li {
-    padding: 12px 16px;
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-}
-/* Hover effect */
-.dropdown-content li:hover {
-    background: #f5f5f5;
-    color: #000;
-}
-
-/* HOVER then list shows */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* CLICK OPENS MENU (JS adds .show) */
-.dropdown-content.show {
-    display: block;
-}
-
 /* ===== HAMBURGER MENU ===== */
 .hamburger {
   display: none;
@@ -203,7 +151,6 @@ nav a.active{
 /*Styling the card created in the javascript*/
 
 /* Container for all cards */
-/* ====== MENU SECTION FIX ====== */
 #menu-section {
   position: relative;
   z-index: 1; /* Prevent nav overlap on Android */

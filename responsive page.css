@@ -1,65 +1,101 @@
 /* =========================================================
-   UNIVERSAL RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES FOR ALL SCREEN SIZES
    ========================================================= */
 
-/* ========== 1024px — Small laptops / large tablets ========== */
+/* ============== Large Tablets & Small Laptops (max 1024px) ============== */
 @media (max-width: 1024px) {
+  header {
+    padding: 1rem;
+  }
 
+  .banner {
+    height: 450px;
+  }
+
+  .banner p {
+    font-size: 2.2rem;
+    top: 35%;
+    left: 30%;
+  }
+
+  #card-container {
+    gap: 15px;
+  }
+
+  .info {
+    max-width: 700px;
+    padding: 10px;
+  }
+}
+
+/* ============== Tablets (max 900px) ============== */
+@media (max-width: 900px) {
+  /* NAVIGATION */
   nav ul {
     gap: 1rem;
   }
 
   .banner p {
-    font-size: 2.5rem;
-    left: 25%;
+    font-size: 2rem;
+    left: 35%;
   }
 
   .info {
     gap: 15px;
   }
+
+  .footer-container img {
+    width: 60%;
+  }
 }
 
-
-/* ========== 900px — Tablets ========== */
-@media (max-width: 900px) {
-
-  header {
-    padding: 1rem;
-  }
-
-  /* Show hamburger, hide desktop menu */
+/* ============== Tablets / Landscape Phones (max 768px) ============== */
+@media (max-width: 768px) {
+  /* SHOW HAMBURGER */
   .hamburger {
     display: block;
+    font-size: 2rem;
     color: #000;
   }
 
+  /* HIDE NAV ON MOBILE UNTIL TOGGLED */
   nav ul {
     display: none;
     flex-direction: column;
-    background: #ffffff;
+    background: #fff;
     position: absolute;
-    top: 100%;
-    right: 0;
-    width: 220px;
+    right: 20px;
+    top: 80px;
+    width: 200px;
     padding: 1rem;
-    gap: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 99;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 50;
   }
 
   nav ul.show {
     display: flex;
   }
 
-  /* Fix dropdown inside mobile menu */
-  .dropdown-content {
-    position: relative;
-    box-shadow: none;
+  header {
+    padding: 1rem;
+  }
+
+  .banner {
+    height: 380px;
   }
 
   .banner p {
-    font-size: 2.2rem;
-    left: 35%;
+    font-size: 1.8rem;
+    left: 40%;
+  }
+
+  #card-container {
+    gap: 20px;
+  }
+
+  .card {
+    width: 45%;
   }
 
   .info {
@@ -67,104 +103,71 @@
     text-align: center;
   }
 
-  #card-container {
-    gap: 15px;
+  form {
+    width: 90%;
   }
 }
 
-
-/* ========== 768px — iPads / Medium Tablets ========== */
-@media (max-width: 768px) {
-
-  /* Banner */
-  .banner {
-    height: 400px;
-  }
-
-  .banner p {
-    font-size: 2rem;
-    top: 35%;
-    left: 40%;
-  }
-
-  /* Cards */
-  .card {
-    width: 45%;
-  }
-
-  .delivery-time {
-    padding: 6px 12px;
-  }
-}
-
-
-/* ========== 600px — Large Phones ========== */
+/* ============== Large Phones (max 600px) ============== */
 @media (max-width: 600px) {
-
   .logo {
     width: 70px;
     height: 70px;
   }
 
+  .delivery-time {
+    padding: 6px 12px;
+    font-size: .85rem;
+  }
+
   .banner {
-    height: 350px;
-  }
-
-  .banner p {
-    font-size: 1.8rem;
-    left: 50%;
-    width: 90%;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  form {
-    width: 90%;
-  }
-
-  .footer-container img {
-    width: 100%;
-  }
-}
-
-
-/* ========== 480px — Small Android Phones ========== */
-@media (max-width: 480px) {
-
-  header {
-    flex-direction: row;
-    gap: 5px;
-  }
-
-  nav ul {
-    width: 180px;
+    height: 300px;
   }
 
   .banner p {
     font-size: 1.6rem;
-    top: 40%;
-  }
-
-  .delivery-time {
-    font-size: .8rem;
-  }
-}
-
-
-/* ========== 360px — Very small phones ========== */
-@media (max-width: 360px) {
-
-  .banner p {
-    font-size: 1.4rem;
+    left: 50%;
   }
 
   .card {
-    width: 100%;
+    width: 80%;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container img {
+    width: 80%;
+  }
+}
+
+/* ============== Small Phones (max 480px) ============== */
+@media (max-width: 480px) {
+  header {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .banner p {
+    font-size: 1.4rem;
+    width: 90%;
+    left: 50%;
+  }
+
+  .card {
+    width: 90%;
   }
 
   form {
-    width: 100%;
+    width: 95%;
+    padding: 15px;
   }
 }
+
+/* ============== Extra Small Phones (max 360px*

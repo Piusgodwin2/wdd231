@@ -1,39 +1,18 @@
-// ===== MOBILE NAVIGATION TOGGLE =====
-const menuToggle = document.getElementById("menu-toggle");
-const navList = document.querySelector("nav ul");
+// Mobile menu toggle
+const toggleBtn = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-menuToggle.addEventListener("click", () => {
-    navList.classList.toggle("show");
+toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 
-    const icon = menuToggle.querySelector("i");
-
-    if (navList.classList.contains("show")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+    // Toggle icon between "=" and "X"
+    if (navMenu.classList.contains("open")) {
+        toggleBtn.textContent = "✖";  // X icon
     } else {
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+        toggleBtn.textContent = "☰";  // Hamburger icon
     }
 });
 
-
-
-const btn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu-list");
-const dropdown = document.querySelector(".dropdown");
-
-// Click to toggle
-btn.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevent closing immediately
-    menu.classList.toggle("show");
-});
-
-// Close when clicking outside
-document.addEventListener("click", (event) => {
-    if (!dropdown.contains(event.target)) {
-        menu.classList.remove("show");
-    }
-});
 
 // import the meals data
 import {meals} from '../chamber/data/food.mjs';

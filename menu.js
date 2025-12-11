@@ -62,4 +62,31 @@ function displayMealsByGroup(meals, pricegroup, container) {
 // CALL FUNCTION
 displayMealsByGroup(meals, pricegroup, container);
 
+ // Add to cart button
+    card.querySelector(".add-btn").addEventListener("click", () => {
+        addToCart(meals);
+    });
+
+// Add to cart function
+function addToCart(meal) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(item => item.name === meal.name);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            name: meal.name,
+            price: meal.price,
+            image: meal.image,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Go to cart page
+    window.location.href = "cart.html";
+}
 
