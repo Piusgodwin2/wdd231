@@ -53,7 +53,7 @@
     "name": "Chicken Salad",
     "description": "A healthy chicken salad with fresh vegetables.",
     "price": 3000,
-    "photo": "CHICKENSalad.webp"
+    "photo": "ChickenSalad.webp"
   },
   {
     "name": "Chicken Pies",
