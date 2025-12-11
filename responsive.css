@@ -1,0 +1,210 @@
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .delivery-time {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+        color: #000814;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+}
+
+/* ===========================
+    BASE STYLES (Desktop First)
+=========================== *
+.banner {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Menu Section 
+#menu-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#menu-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px 0;
+}
+
+/* Info Section 
+.info-box {
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+.info-box h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.info-box .info p {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+  font-size: 1.2rem;
+}*/
+
+
+
+/* ===========================
+      LARGE TABLETS (1024px)
+=========================== */
+@media (max-width: 1024px) {
+  #card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner {
+    height: 380px;
+  }
+
+  #menu-section h1,
+  .info-box h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* ===========================
+      TABLETS (768px)
+=========================== */
+@media (max-width: 768px) {
+  .banner {
+    height: 320px;
+  }
+
+  #card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .info-box .info p {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ===========================
+      MOBILE (600px)
+=========================== */
+@media (max-width: 600px) {
+  .banner {
+    height: 250px;
+  }
+
+  #menu-section h1,
+  .info-box h1 {
+    font-size: 1.7rem;
+  }
+
+  #card-container {
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 18px;
+  }
+
+  .info-box .info p {
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+}
+
+
+/* ===========================
+      SMALL MOBILE (430px)
+=========================== */
+@media (max-width: 430px) {
+  .banner {
+    height: 220px;
+  }
+
+  #menu-section {
+    padding: 30px 10px;
+  }
+
+  #menu-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-box .info p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ===========================
+      VERY SMALL (350px)
+=========================== */
+@media (max-width: 350px) {
+  .banner {
+    height: 180px;
+  }
+
+  #menu-section h1,
+  .info-box h1 {
+    font-size: 1.3rem;
+  }
+
+  .info-box .info p {
+    font-size: 0.9rem;
+  }
+}
